@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, SafeAreaView, Text, View, Button, TextInput, StatusBar } from 'react-native';
+import tailwind from 'tailwind-rn';
+import ListScreen from './src/screens/ListScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <SafeAreaView style={tailwind('bg-white')}/>
+      <View style={tailwind('bg-gray-100 h-full p-4')}> 
+        <ListScreen/>
+      </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  
 });
