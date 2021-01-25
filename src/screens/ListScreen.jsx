@@ -16,6 +16,7 @@ const ListScreen = () => {
 
     return (
         <View>
+            <Text style={tailwind('text-3xl p-6 text-center')}>List Screen Component</Text>
             <ScrollView style={tailwind('h-full')}>
             {people.map(person => (
                 <View key={person.key} style={tailwind('bg-green-300 mb-2 p-4 rounded-lg')}>

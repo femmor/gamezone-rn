@@ -3,6 +3,7 @@ import { StyleSheet, SafeAreaView, Text, View, Button, TextInput, StatusBar } fr
 import tailwind from 'tailwind-rn';
 import FlatListScreen from './src/screens/FlatListScreen';
 import ListScreen from './src/screens/ListScreen';
+import TouchableCompScreen from './src/screens/TouchableCompScreen';
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
       <SafeAreaView style={tailwind('bg-white')}/>
       <View style={tailwind('bg-gray-100 h-full p-4')}> 
         {/* <ListScreen/> */}
-        <FlatListScreen/>
+        {/* <FlatListScreen/> */}
+        <TouchableCompScreen/>
       </View>
     </View>
   )

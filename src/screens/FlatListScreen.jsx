@@ -16,6 +16,7 @@ const FlatListScreen = () => {
 
     return (
         <View>
+            <Text style={tailwind('text-3xl p-6 text-center')}>FlatList Component</Text>
             <FlatList
                 style={tailwind('h-full')}
                 data={people}
