@@ -1,19 +1,17 @@
-import React, {useState} from 'react';
-import { StyleSheet, SafeAreaView, Text, View, Button, TextInput, StatusBar } from 'react-native';
+import React from 'react';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
 import tailwind from 'tailwind-rn';
-import FlatListScreen from './src/screens/FlatListScreen';
-import ListScreen from './src/screens/ListScreen';
-import TouchableCompScreen from './src/screens/TouchableCompScreen';
+import Header from './src/components/Header';
+import TodoScreen from './src/screens/Todo';
 
 export default function App() {
   return (
     <View>
       <SafeAreaView style={tailwind('bg-white')}/>
-      <View style={tailwind('bg-gray-100 h-full p-4')}> 
-        {/* <ListScreen/> */}
-        {/* <FlatListScreen/> */}
-        <TouchableCompScreen/>
-      </View>
+        <Header/>
+        <View style={tailwind('bg-gray-100 p-5 h-full')}> 
+            <TodoScreen/>
+        </View>
     </View>
   )
 }
