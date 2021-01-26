@@ -23,7 +23,7 @@ const TodoListScreen = () => {
     }
 
     return (
-        <View style={tailwind('h-full')}>
+        <View style={tailwind('')}>
             <AddTask submitTask={submitTask}/>
             <FlatList
                 data={todos}

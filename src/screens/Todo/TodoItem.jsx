@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import tailwind from 'tailwind-rn'
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const TodoItem = ({ item, pressHandler }) => {
     return (
@@ -9,7 +9,7 @@ const TodoItem = ({ item, pressHandler }) => {
             <TouchableOpacity>
                 <Text style={tailwind('text-lg capitalize')}>{item.text}</Text>
             </TouchableOpacity>
-            <Icon name="trash" size={24} color="#cf0000" onPress={() => pressHandler(item.id)}/>
+            <MaterialIcons style={tailwind('p-2')} name="delete-outline" size={24} color="#cf0000" onPress={() => pressHandler(item.id)} />
         </View>
     )
 }

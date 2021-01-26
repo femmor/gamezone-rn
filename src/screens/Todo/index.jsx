@@ -1,10 +1,11 @@
 import React from 'react'
 import { View } from 'react-native'
+import tailwind from 'tailwind-rn'
 import TodoListScreen from './TodoListScreen'
 
 const TodoScreen = () => {
     return (
-        <View>
+        <View style={tailwind('')}>
             <TodoListScreen/>
         </View>
     )

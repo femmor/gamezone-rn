@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Alert, TextInput, View } from 'react-native'
 import tailwind from 'tailwind-rn'
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const AddTask = ({ submitTask }) => {
 
@@ -20,13 +20,14 @@ const AddTask = ({ submitTask }) => {
 
     return (
         <View style={tailwind('my-4')}>
-            <View style={tailwind('p-4 bg-white rounded-lg flex flex-row justify-between')}>
+            <View style={tailwind('bg-white rounded-lg flex flex-row justify-between')}>
                 <TextInput
+                    style={tailwind('p-4 w-3/4')}
                     onChangeText={changeHandler}
                     value={text}
                     placeholder="Add a task..."
                 />
-                <Icon name="plus" size={20} color="#fcbf25" onPress={submitHandler}/>
+                <MaterialIcons style={tailwind('p-4')} name="add" size={24} color="#e28903" onPress={submitHandler}/>
             </View>
         </View>
     )
