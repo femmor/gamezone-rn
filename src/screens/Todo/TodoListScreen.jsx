@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 import { View, FlatList, Text, TouchableOpacity } from 'react-native'
 import tailwind from 'tailwind-rn'
+import AddTask from '../../components/AddTask'
 import TodoItem from './TodoItem'
 
 const TodoListScreen = () => {
 
-    const [todos, setTodos] = useState([
-        {text: "buy coffee", id: 1},
-        {text: "create a mobile app", id: 2},
-        {text: "convert it to a web app", id: 3},
-    ])
+    const [todos, setTodos] = useState([])
 
     const pressHandler = id => {
         // Delete Taskss
@@ -18,9 +15,16 @@ const TodoListScreen = () => {
         ))
     }
 
+    const submitTask = (text) => {
+        setTodos((prevTodos) => 
+            [...prevTodos, {text, id: Math.random().toString()}]
+        )
+        
+    }
 
     return (
         <View style={tailwind('h-full')}>
+            <AddTask submitTask={submitTask}/>
             <FlatList
                 data={todos}
                 keyExtractor={item => item.id}
